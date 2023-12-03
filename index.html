@@ -1,1 +1,371 @@
-<h1>hello</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="My3DGen: A Scalable Personalized 3D Generative Model.">
+  <meta name="keywords" content="My3DGen, EG3D">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personalized Video Relighting With an At-Home Light Stage</title>
+
+  <!-- visiting analytics -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0K35Z58E01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0K35Z58E01');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- icons -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <!-- https://jpswalsh.github.io/academicons/ -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- custom additional scripts -->
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- https://docs.mathjax.org/en/latest/web/configuration.html#configuration-using-an-in-line-script -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+
+  <!-- swiper -->
+  <!-- https://swiperjs.com/demos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
+  <!-- img comparison slider -->
+  <!-- https://github.com/sneas/img-comparison-slider -->
+  <style>
+    .before,
+    .after {
+      margin: 0;
+    }
+  
+    .before figcaption,
+    .after figcaption {
+      background: #fff;
+      border: 1px solid #c0c0c0;
+      border-radius: 12px;
+      color: #2e3452;
+      opacity: 0.8;
+      padding: 12px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 100%;
+    }
+  
+    .before figcaption {
+      left: 12px;
+    }
+  
+    .after figcaption {
+      right: 12px;
+    }
+  </style>
+  <script
+  defer
+  src="./static/js/image-comparison-slider.js"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="./static/css/image-comparison-slider.css"
+  />
+</head>
+<body>
+
+<!-- authors -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Personalized Video Relighting With<br>an At-Home Light Stage</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://chedgekorea.github.io">Jun Myeong Choi</a><sup>1</sup>,
+			</span>
+            <span class="author-block">
+				Max Christman</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.unc.edu/~ronisen/">Roni Sengupta</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of North Carolina at Chapel Hill</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2311.08843"
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark" disabled
+                   target="_blank">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- teaser -->
+<section class="hero teaser">
+  <div class="hero-body is-full-width container is-max-desktop">
+    <div class="columns is-vcentered">
+      <div class="column is-5">
+        <video id="paper-video1" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser1.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-7">
+        <video id="paper-video2" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser2.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <h2 class="subtitle has-text-centered">
+      <span class="dnerf"></span> Light Stage at Your Desk to build a personalized relighting algorithm (left), Relit result (right).
+    </h2>
+  </div>
+</section>
+
+
+<!-- abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            <p>
+				In this paper, we develop a personalized video relighting algorithm that produces high-quality and temporally consistent relit videos under any pose, expression, and lighting condition in real-time. 
+				Existing relighting algorithms typically rely either on publicly available synthetic data, which yields poor relighting results, or instead on light stage data which is difficult to obtain. 
+				We show that by just capturing video of a user watching YouTube videos on a monitor we can train a personalized algorithm capable of performing high-quality relighting under any condition.
+            </p>
+            <p>
+				Our key contribution is a novel neural relighting architecture that effectively separates the intrinsic appearance features --- the geometry and reflectance of the face --- from the source lighting and then combines them with the target lighting to generate a relit image. 
+				This neural network architecture enables smoothing of intrinsic appearance features leading to temporally stable video relighting. 
+				Both qualitative and quantitative evaluations show that our architecture improves portrait image relighting quality and temporal consistency over state-of-the-art approaches on both casually captured `Light Stage at Your Desk' (LSYD) and light-stage-captured `One Light At a Time' (OLAT) datasets. 
+            </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<!-- image result -->
+<section class="section">
+	<div class="container is-max-desktop">
+  
+  
+	  <div class="columns is-centered">
+		<div class="column is-full-width">
+		  <!-- <h2 class="title is-3">Downstream Applications</h2> -->
+  
+  
+		  <div style="width: 100%;">
+			  <!-- LSYD result -->
+			<h3 class="title is-4">Model Architecture</h3>
+			<div class="content has-text-centered">
+			  <img src="./static/images/architecture.jpg"/>
+			</div>
+
+		  </div>
+		  
+		</div>
+	  </div>
+  
+  
+	</div>
+  </section>
+
+
+<!-- image result -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!-- <h2 class="title is-3">Downstream Applications</h2> -->
+
+
+        <div style="width: 100%;">
+			<!-- LSYD result -->
+          <h3 class="title is-4">Relighting Results</h3>
+          <div class="content has-text-justified">
+            <p>
+				A qualitative comparison with existing relighting techniques(<a href="https://grail.cs.washington.edu/projects/Light_Stage_on_Every_Desk/">Sengupta et al.</a> and <a href="https://cseweb.ucsd.edu/~ravir/portrait_relighting.pdf">Sun et al.</a>) on unseen test data from LSYD
+            </p>
+          </div>
+		  <div class="content has-text-centered">
+			<img src="./static/images/LSYD.png"/>
+          </div>
+		<hr>
+
+		  <!-- OLAT result -->
+		  <div class="content has-text-justified">
+            <p>
+				A qualitative comparison with existing relighting techniques(<a href="https://grail.cs.washington.edu/projects/Light_Stage_on_Every_Desk/">Sengupta et al.</a> and <a href="https://cseweb.ucsd.edu/~ravir/portrait_relighting.pdf">Sun et al.</a>) on unseen test data from <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Zhang_Neural_Video_Portrait_Relighting_in_Real-Time_via_Consistency_Modeling_ICCV_2021_paper.pdf">OLAT</a>
+            </p>
+          </div>
+		  <div class="content has-text-centered">
+			<img src="./static/images/OLAT.png"/>
+          </div>
+          <hr>
+		  <!-- In the Wild result -->
+		  <div class="content has-text-justified">
+            <p>
+				Relight portrait images captured <b>“In The Wild”</b> without using any monitor light source
+            </p>
+          </div>
+		  <div class="content has-text-centered">
+			<img src="./static/images/in_the_wild.png"/>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+<!-- video result -->
+<section class="section">
+	<div class="container is-max-desktop">
+  
+  
+	  <div class="columns is-centered">
+		<div class="column is-full-width">
+		  <!-- <h2 class="title is-3">Downstream Applications</h2> -->
+  
+  
+		  <div style="width: 100%;">
+			  <!-- LSYD result -->
+			<h3 class="title is-4">Temporal Consistency</h3>
+			<div class="content has-text-justified">
+			  <p>
+				  Utilizing the ideal ring light as the target light
+			  </p>
+			</div>
+			<div class="content has-text-centered">
+				<video id="paper-video2" autoplay muted loop playsinline height="100%">
+					<source src="./static/videos/consistency1.mp4"
+							type="video/mp4">
+			</div>
+			
+		  </div>
+		  
+		</div>
+	  </div>
+  
+  
+	</div>
+  </section>
+
+
+<!-- bib -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{choi2023personalized,
+        title={Personalized Video Relighting Using Casual Light Stage}, 
+        author={Jun Myeong Choi and Max Christman and Roni Sengupta},
+        year={2023},
+        eprint={2311.08843},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV}
+  }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <a class="icon-link" href="https://chedgekorea.github.io" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website template credits to <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
