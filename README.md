@@ -1,8 +1,8 @@
-# My3DGen
+# Personalized Video Relighting With an At-Home Light Stage website
 
 This is the repository that contains source code for the [Personalized Video Relighting With an At-Home Light Stage website](https://chedgekorea.github.io/relighting/).
 
-If you find My3DGen useful for your work please cite:
+If you find 'Personalized Video Relighting With an At-Home Light Stage' website useful for your work please cite:
 ```
 @misc{choi2023personalized,
         title={Personalized Video Relighting Using Casual Light Stage}, 
